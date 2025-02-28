@@ -1,14 +1,13 @@
 openapi: 3.0.0
 info:
-  title: Web Check 🕵
+  title: WebSint 🕵
   description: >
-    **API documentation for the [Web Check](https://github.com/lissy93/web-check) backend endpoints.**<br>
-    _Web Check gives you x-ray vision, revealing the configration and inner workings of any website._
+    **API documentation for the [WebSint](https://github.com/letchupkt/websint) backend endpoints.**<br>
+    _WebSint gives you x-ray vision, revealing the configuration and inner workings of any website._
     <br><br>
-    [![Website - Web-Check.xyz](https://img.shields.io/badge/Website-webcheck.zyz-9fef00?style=flat&logo=googlecloudstorage&logoColor=white&labelColor=1c1d28)](https://web-check.xyz/)
-    [![DockerHub - Lissy93/Web-Check](https://img.shields.io/badge/DockerHub-Lissy93/Web_Check-1fb1f4?style=flat&logo=docker&logoColor=white&labelColor=1c1d28)](https://hub.docker.com/r/lissy93/web-check)
-    [![GitHub - Lissy93/Web-Check](https://img.shields.io/badge/GitHub-Lissy93/Web_Check-a832fc?style=flat&logo=github&logoColor=white&labelColor=1c1d28)](https://github.com/lissy93/web-check)
-    [![Sponsor - Alicia Sykes](https://img.shields.io/badge/Sponsor-Alicia_Sykes-f2159a?style=flat&logo=githubsponsors&logoColor=white&labelColor=1c1d28)](https://github.com/sponsors/Lissy93)
+    [![Website - WebSint.xyz](https://img.shields.io/badge/Website-websint.xyz-9fef00?style=flat&logo=googlecloudstorage&logoColor=white&labelColor=1c1d28)](https://websint.xyz/)
+    [![DockerHub - letchupkt/WebSint](https://img.shields.io/badge/DockerHub-letchupkt/WebSint-1fb1f4?style=flat&logo=docker&logoColor=white&labelColor=1c1d28)](https://hub.docker.com/r/letchupkt/websint)
+    [![GitHub - letchupkt/WebSint](https://img.shields.io/badge/GitHub-letchupkt/WebSint-a832fc?style=flat&logo=github&logoColor=white&labelColor=1c1d28)](https://github.com/letchupkt/websint)
   
   version: 1.0.0
   license:

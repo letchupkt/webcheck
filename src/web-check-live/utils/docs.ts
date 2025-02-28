@@ -254,7 +254,7 @@ const docs: Doc[] = [
     id: "dnssec",
     title: "DNS Security Extensions",
     description:
-      "Without DNSSEC, it's possible for MITM attackers to spoof records and lead users to phishing sites. This is because the DNS system includes no built-in methods to verify that the response to the request was not forged, or that any other part of the process wasn’t interrupted by an attacker. The DNS Security Extensions (DNSSEC) secures DNS lookups by signing your DNS records using public keys, so browsers can detect if the response has been tampered with. Another solution to this issue is DoH (DNS over HTTPS) and DoT (DNS over TLD).",
+      "Without DNSSEC, it's possible for MITM attackers to spoof records and lead users to phishing sites. This is because the DNS system includes no built-in methods to verify that the response to the request was not forged, or that any other part of the process wasn't interrupted by an attacker. The DNS Security Extensions (DNSSEC) secures DNS lookups by signing your DNS records using public keys, so browsers can detect if the response has been tampered with. Another solution to this issue is DoH (DNS over HTTPS) and DoT (DNS over TLD).",
     use: "DNSSEC information provides insight into an organization's level of cybersecurity maturity and potential vulnerabilities, particularly around DNS spoofing and cache poisoning. If no DNS secururity (DNSSEC, DoH, DoT, etc) is implemented, this may provide an entry point for an attacker.",
     resources: [
       "https://dnssec-analyzer.verisignlabs.com/",
@@ -521,8 +521,8 @@ export const featureIntro = [
 ];
 
 export const about = [
-`Web-Check is a powerful all-in-one tool for discovering information about a website/host.
-The core philosophy is simple: feed Web-Check a URL and let it gather, collate, and present a broad array of open data for you to delve into.`,
+`WebSint is a powerful all-in-one tool for discovering information about a website/host.
+The core philosophy is simple: feed WebSint a URL and let it gather, collate, and present a broad array of open data for you to delve into.`,
 
 `The report shines a spotlight onto potential attack vectors, existing security measures,
 and the web of connections within a site's architecture.
@@ -556,10 +556,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 `;
 
 export const supportUs = [
-  "Web-Check is free to use without restriction.",
+  "WebSint is free to use without restriction.",
   "All the code is open source, so you're also free to deploy your own instance, as well as fork, modify and distribute the code in both private and commercial settings.",
-  "Running web-check does cost me a small amount of money each month, so if you're finding the app useful, consider <a href='https://github.com/sponsors/Lissy93'>sponsoring me on GitHub</a> if you're able to. Even just $1 or $2/month would be a huge help in supporting the ongoing project running costs.",
-  "Otherwise, there are other ways you can help out, like submitting or reviewing a pull request to the <a href='https://github.com/Lissy93/web-check'>GitHub repo</a>, upvoting us on <a href='https://www.producthunt.com/posts/web-check'>Product Hunt</a>, or by sharing with your network.",
+  "Running websint does cost me a small amount of money each month, so if you're finding the app useful, consider <a href='https://github.com/sponsors/letchupkt'>sponsoring me on GitHub</a> if you're able to. Even just $1 or $2/month would be a huge help in supporting the ongoing project running costs.",
+  "Otherwise, there are other ways you can help out, like submitting or reviewing a pull request to the <a href='https://github.com/letchupkt/websint'>GitHub repo</a>, upvoting us on <a href='https://www.producthunt.com/posts/websint'>Product Hunt</a>, or by sharing with your network.",
   "But don't feel obliged to do anything, as this app (and all my other projects) will always remain 100% free and open source, and I will do my best to ensure the managed instances remain up and available for as long as possible :)",
 ];
 

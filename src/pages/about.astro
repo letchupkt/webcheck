@@ -1,0 +1,44 @@
+---
+import BaseLayout from '@layouts/Base.astro';
+import NavBar from '@components/scafold/Nav.astro';
+import Footer from '@components/scafold/Footer.astro';
+---
+
+<BaseLayout
+  title="About | WebSint"
+  description="Learn more about WebSint - the all-in-one OSINT tool for website intelligence"
+>
+  <div class="web-check-page">
+    <NavBar />
+    <main>
+      <h1>About WebSint</h1>
+      <p>
+        WebSint is an all-in-one OSINT tool that gives you x-ray vision into any website.
+        Feed it a URL and it will gather, analyze and present a comprehensive report about the site's inner workings.
+      </p>
+
+      <h2>Features</h2>
+      <ul>
+        <li>DNS records and server configuration analysis</li>
+        <li>Security headers and SSL certificate inspection</li>
+        <li>Technology stack detection</li>
+        <li>Performance and accessibility metrics</li>
+        <li>Domain information and WHOIS data</li>
+        <li>And much more...</li>
+      </ul>
+
+      <h2>Open Source</h2>
+      <p>
+        WebSint is free and open source software, licensed under MIT.
+        The source code is available on <a href="https://github.com/letchupkt/websint">GitHub</a>.
+      </p>
+
+      <h2>Author</h2>
+      <p>
+        WebSint is developed and maintained by letchupkt.
+        You can find me on <a href="https://github.com/letchupkt">GitHub</a>.
+      </p>
+    </main>
+    <Footer />
+  </div>
+</BaseLayout> 

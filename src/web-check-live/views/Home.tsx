@@ -219,8 +219,8 @@ const Home = (): JSX.Element => {
       <UserInputMain onSubmit={formSubmitEvent}>
         <a href="/">
           <Heading as="h1" size="xLarge" align="center" color={colors.primary}>
-            <img width="64" src="/web-check.png" alt="Web Check Icon" />
-            Web Check
+            <img width="64" src="/websint.png" alt="WebSint Icon" />
+            WebSint
           </Heading>
         </a>
         <Input
@@ -237,7 +237,9 @@ const Home = (): JSX.Element => {
         />
         {/* <FindIpButton onClick={findIpAddress}>Or, find my IP</FindIpButton> */}
         { errorMsg && <ErrorMessage>{errorMsg}</ErrorMessage>}
-        <Button type="submit" styles="width: calc(100% - 1rem);" size="large" onClick={submit}>Analyze!</Button>
+        <Button type="submit" styles="width: calc(100% - 1rem);" size="large" onClick={submit}>
+          Analyze!
+        </Button>
       </UserInputMain>
       <SponsorCard>
         <Heading as="h2" size="small" color={colors.primary}>Sponsored by</Heading>

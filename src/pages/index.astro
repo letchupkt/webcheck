@@ -25,7 +25,28 @@ if (!isBossServer) {
   </Fragment>
   { disableEverything && <TempDisabled />}
   <main>
-    <HeroForm />
+    <div class="hero">
+      <div class="left">
+        <h1>
+          <img src="/favicon.svg" alt="WebSint" width="64" />
+          <span class="web">Web</span>
+          <span class="sint">Sint</span>
+        </h1>
+        <div class="homepage-action-content">
+          <h2>We give you X-Ray<br />Vision for your Website</h2>
+          <h3>
+            In just 20 seconds, you can see
+            <span>what attackers already know</span>
+          </h3>
+          <form name="live-start" autocomplete="off" action="/check" class="live-start" id="live-start">
+            <label for="url">Enter a URL to start 👇</label>
+            <AnimatedInput />
+            <AnimatedButton />
+          </form>
+        </div>
+      </div>
+      <Screenshots />
+    </div>
     <AboutSection />
   </main>
   <Footer />
