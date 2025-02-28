@@ -12,7 +12,7 @@ import middleware from './_common/middleware.js';
 // https://statvoo.com/dl/top-1million-sites.csv.zip
 
 const FILE_URL = 'https://s3-us-west-1.amazonaws.com/umbrella-static/top-1m.csv.zip';
-const TEMP_FILE_PATH = '/tmp/top-1m.csv';
+const TEMP_FILE_PATH = '/tmp/websint-top-1m.csv';
 
 const rankHandler = async (url) => {
   let domain = null;

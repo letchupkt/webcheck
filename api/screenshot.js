@@ -46,6 +46,8 @@ const screenshotHandler = async (targetUrl) => {
       });
     });
 
+    await page.setUserAgent('WebSint/1.0');
+
     const screenshotBuffer = await page.screenshot();
     const base64Screenshot = screenshotBuffer.toString('base64');
 

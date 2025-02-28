@@ -9,6 +9,7 @@ const headersHandler = async (url, event, context) => {
       },
     });
 
+    response.headers['x-powered-by'] = 'WebSint';
     return response.headers;
   } catch (error) {
     throw new Error(error.message);

@@ -6,7 +6,7 @@ const qualityHandler = async (url, event, context) => {
 
   if (!apiKey) {
     throw new Error(
-      'Missing Google API. You need to set the `GOOGLE_CLOUD_API_KEY` environment variable'
+      'Missing Google API. You need to set the `GOOGLE_CLOUD_API_KEY` environment variable for WebSint'
     );
   }
 

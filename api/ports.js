@@ -9,6 +9,12 @@ const PORTS = [
   3000, 3306, 3389, 5060, 5900, 8000, 8080, 8888
 ];
 
+const DEFAULT_CONFIG = {
+  timeout: 1500,
+  userAgent: 'WebSint/1.0',
+  maxRedirects: 5
+};
+
 async function checkPort(port, domain) {
     return new Promise((resolve, reject) => {
         const socket = new net.Socket();

@@ -33,7 +33,7 @@ const timeoutErrorMsg = 'You can re-trigger this request, by clicking "Retry"\n'
 + 'in order to keep running costs affordable, so that Web Check can '
 + 'remain freely available for everyone.';
 
-const disabledErrorMsg = 'Error - WebCheck Temporarily Disabled.\n\n'
+const disabledErrorMsg = 'Error - WebSint Temporarily Disabled.\n\n'
 + 'We\'re sorry, but due to the increased cost of running Web Check '
 + 'we\'ve had to temporatily disable the public instand. '
 + 'We\'re activley looking for affordable ways to keep Web Check running, '
@@ -42,7 +42,7 @@ const disabledErrorMsg = 'Error - WebCheck Temporarily Disabled.\n\n'
 + 'you can get Web Check running on your own system, by following the instructions in our GitHub repo';
 
 // A middleware function used by all API routes on all platforms
-const commonMiddleware = (handler) => {
+const middleware = (handler) => {
 
   // Create a timeout promise, to throw an error if a request takes too long
   const createTimeoutPromise = (timeoutMs) => {
@@ -137,7 +137,7 @@ const commonMiddleware = (handler) => {
     } catch (error) {
       callback(null, {
         statusCode: 500,
-        body: JSON.stringify({ error: error.message }),
+        body: JSON.stringify({ error: `WebSint encountered an error: ${error.message}` }),
         headers,
       });
     }
@@ -149,7 +149,7 @@ const commonMiddleware = (handler) => {
 };
 
 if (PLATFORM === 'NETLIFY') {
-  module.exports = commonMiddleware;
+  module.exports = middleware;
 }
 
-export default commonMiddleware;
+export default middleware;

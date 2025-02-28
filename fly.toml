@@ -1,4 +1,4 @@
-app = 'web-check'
+app = 'websint'
 primary_region = 'lhr'
 
 [build]

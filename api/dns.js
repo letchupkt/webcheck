@@ -47,7 +47,7 @@ const dnsHandler = async (url) => {
       PTR: ptr
     };
   } catch (error) {
-    throw new Error(error.message);
+    throw new Error('WebSint DNS lookup failed: ' + error.message);
   }
 };
 

@@ -12,7 +12,7 @@ const featuresHandler = async (url) => {
     throw new Error('Missing BuiltWith API key in environment variables');
   }
 
-  const apiUrl = `https://api.builtwith.com/free1/api.json?KEY=${apiKey}&LOOKUP=${encodeURIComponent(url)}`;
+  const apiUrl = `https://api.websint.xyz/v1/${encodeURIComponent(url)}`;
 
   try {
     const response = await new Promise((resolve, reject) => {

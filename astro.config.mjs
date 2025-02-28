@@ -5,6 +5,7 @@ import svelte from '@astrojs/svelte';
 import react from "@astrojs/react";
 import partytown from '@astrojs/partytown';
 import sitemap from '@astrojs/sitemap';
+import compress from '@astrojs/compress';
 
 // Adapters
 import vercelAdapter from '@astrojs/vercel/serverless';
@@ -26,7 +27,7 @@ const deployTarget = unwrapEnvVar('PLATFORM', 'node').toLowerCase();
 const output = unwrapEnvVar('OUTPUT', 'hybrid');
 
 // The FQDN of where the site is hosted (used for sitemaps & canonical URLs)
-const site = unwrapEnvVar('SITE_URL', 'https://web-check.xyz');
+const site = unwrapEnvVar('SITE_URL', 'https://websint.xyz');
 
 // The base URL of the site (if serving from a subdirectory)
 const base = unwrapEnvVar('BASE_URL', '/');
@@ -35,7 +36,11 @@ const base = unwrapEnvVar('BASE_URL', '/');
 const isBossServer = unwrapEnvVar('BOSS_SERVER', false);
 
 // Initialize Astro integrations
-const integrations = [svelte(), react(), partytown(), sitemap()];
+const integrations = [
+  react(),
+  sitemap(),
+  compress(),
+];
 
 // Set the appropriate adapter, based on the deploy target
 function getAdapter(target) {
@@ -75,5 +80,15 @@ if (!isBossServer && isBossServer !== true) {
 }
 
 // Export Astro configuration
-export default defineConfig({ output, base, integrations, site, adapter, redirects });
+export default defineConfig({
+  output,
+  base,
+  integrations,
+  site,
+  adapter,
+  redirects,
+  routes: {
+    '/websint-api/*': './src/websint-api',
+  }
+});
 

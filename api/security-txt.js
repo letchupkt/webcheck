@@ -92,5 +92,9 @@ async function fetchSecurityTxt(baseURL, path) {
   });
 }
 
+/**
+ * WebSint Security.txt Handler
+ * Checks for the presence and contents of security.txt files
+ */
 export const handler = middleware(securityTxtHandler);
 export default handler;

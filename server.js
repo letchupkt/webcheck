@@ -1,4 +1,3 @@
-
 import fs from 'fs';
 import path from 'path';
 import cors from 'cors';
@@ -17,7 +16,7 @@ const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
 
 const port = process.env.PORT || 3000; // The port to run the server on
-const API_DIR = '/api'; // Name of the dir containing the lambda functions
+const API_DIR = '/websint-api'; // Name of the dir containing the lambda functions
 const dirPath = path.join(__dirname, API_DIR); // Path to the lambda functions dir
 const guiPath = path.join(__dirname, 'dist', 'client');
 const placeholderFilePath = path.join(__dirname, 'public', 'placeholder.html');
@@ -129,7 +128,7 @@ app.get(API_DIR, async (req, res) => {
 
     try {
       const result = await Promise.race([
-        executeHandler(handler, req, res),
+        executeHandler(handler, req),
         timeout(maxExecutionTime, routeName)
       ]);
       results[routeName] = result.body;
@@ -192,15 +191,15 @@ app.use((req, res, next) => {
 const printMessage = () => {
   console.log(
     `\x1b[36m\n` +
-    '    __      __   _         ___ _           _   \n' +
-    '    \\ \\    / /__| |__ ___ / __| |_  ___ __| |__\n' +
-    '     \\ \\/\\/ / -_) \'_ \\___| (__| \' \\/ -_) _| / /\n' +
-    '      \\_/\\_/\\___|_.__/    \\___|_||_\\___\\__|_\\_\\\n' +
+    '    __      __   _    ___ _     _   \n' +
+    '    \\ \\    / /__| |__/ __(_)_ _| |_ \n' +
+    '     \\ \\/\\/ / -_) \'_ \\__ \\ | \' \\  _|\n' +
+    '      \\_/\\_/\\___|_.__/___/_|_||_\\__|\n' +
     `\x1b[0m\n`,
-    `\x1b[1m\x1b[32m🚀 Web-Check is up and running at http://localhost:${port} \x1b[0m\n\n`,
+    `\x1b[1m\x1b[32m🚀 WebSint is up and running at http://localhost:${port} \x1b[0m\n\n`,
     `\x1b[2m\x1b[36m🛟 For documentation and support, visit the GitHub repo: ` +
-    `https://github.com/lissy93/web-check \n`,
-    `💖 Found Web-Check useful? Consider sponsoring us on GitHub ` +
+    `https://github.com/letchupkt/websint \n`,
+    `💖 Found WebSint useful? Consider sponsoring us on GitHub ` +
     `to help fund maintenance & development.\x1b[0m`
   );
 };
